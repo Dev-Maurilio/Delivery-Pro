@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A melhor pizza no forno a lenha da região. Peça agora pelo WhatsApp!">
+    <meta property="og:image">
+    <title>Pizzaria Premium - A Melhor da Região</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#E63946', // Vermelho vibrante
+                            dark: '#1A1A1A', // Preto suave
+                            light: '#F8F9FA', // Branco off-white
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased pt-16">
+
+    <!-- Navbar Fixed -->
+    <nav class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 h-16">
+        <div class="container mx-auto px-4 h-full flex items-center justify-between">
+
+            <!-- Identity (Logo + Name) -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <!-- Placeholder Logo -->
+                <div
+                    class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center text-white shadow-md transform group-hover:rotate-3 transition-all duration-300">
+                    <i class="fa-solid fa-pizza-slice text-xl"></i>
+                </div>
+                <!-- Brand Name -->
+                <span class="font-bold text-xl tracking-tight text-gray-800" id="navbar-title">
+                    <!-- Loaded by JS -->
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center gap-8 font-semibold text-gray-600 text-sm tracking-wide">
+                <li><a href="#home" class="hover:text-brand-red transition-colors py-2">INÍCIO</a></li>
+                <li><a href="#cardapio" class="hover:text-brand-red transition-colors py-2">CARDÁPIO</a></li>
+            </ul>
+
+            <!-- Social Icons (Desktop) -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="#" id="navbar-instagram" target="_blank"
+                    class="text-gray-400 hover:text-brand-red transition-colors p-2 rounded-full hover:bg-red-50">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" id="navbar-whatsapp" target="_blank"
+                    class="text-gray-400 hover:text-brand-red transition-colors p-2 rounded-full hover:bg-red-50"
+                    title="Fale conosco pelo WhatsApp">
+                    <span class="sr-only">WhatsApp</span>
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[90vh] flex items-center justify-center bg-brand-dark overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2670&auto=format&fit=crop"
+                alt="Pizza no forno a lenha" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+                Pizzaria <span class="text-brand-red">Premium</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-100 mb-10 font-normal max-w-2xl mx-auto">
+                O sabor que você ama, com a praticidade que você precisa. Escolha suas favoritas e peça pelo WhatsApp.
+            </p>
+            <a href="#cardapio"
+                class="inline-block bg-brand-red hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl animate-fade-in-up uppercase tracking-wide">
+                Fazer pedido
+            </a>
+        </div>
+    </section>
+
+    <!-- Diferenciais (Differentiators) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" id="diferenciais">
+                <!-- Item 1: Cardápio Digital -->
+                <div class="p-6 rounded-2xl hover:bg-gray-50 transition-colors group">
+                    <div
+                        class="w-16 h-16 bg-red-50 text-brand-red rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:-translate-y-1">
+                        <!-- Icon: Smartphone (Modern) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cardápio Digital</h3>
+                    <p class="text-gray-600">Acesse nosso cardápio completo de forma rápida e organizada pelo
+                        celular.
+                    </p>
+                </div>
+                <!-- Item 2: Qualidade Garantida -->
+                <div class="p-6 rounded-2xl hover:bg-gray-50 transition-colors group">
+                    <div
+                        class="w-16 h-16 bg-red-50 text-brand-red rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:-translate-y-1">
+                        <!-- Icon: Star (Modern/Award) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Qualidade Garantida</h3>
+                    <p class="text-gray-600">Compromisso com a sua satisfação e com o padrão de cada pedido
+                        realizado.
+                    </p>
+                </div>
+                <!-- Item 3: Facilidade no Pedido -->
+                <div class="p-6 rounded-2xl hover:bg-gray-50 transition-colors group">
+                    <div
+                        class="w-16 h-16 bg-red-50 text-brand-red rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:-translate-y-1">
+                        <!-- Icon: Send/Fast (Modern) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Facilidade no Pedido</h3>
+                    <p class="text-gray-600">Monte seu carrinho e envie o pedido customizado direto para o nosso
+                        WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio (Menu) -->
+    <section id="cardapio" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+                Nosso<span class="text-brand-red"> Cardápio</span>
+            </h2>
+
+            <!-- Category Tabs -->
+            <div id="category-tabs" class="flex justify-center mb-8 gap-4 overflow-x-auto pb-2 scrollbar-hide">
+                <!-- Dynamically Generated by JS -->
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Dynamic Content Loading... -->
+
+            </div>
+        </div>
+
+        <script src="config.js"></script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-left max-w-2xl mx-auto">
+                <div>
+                    <h4 class="text-brand-red font-bold uppercase tracking-widest mb-4 text-sm">Funcionamento</h4>
+                    <p class="text-gray-400" id="footer-hours-msg">
+                        <!-- Loaded by JS -->
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-brand-red font-bold uppercase tracking-widest mb-4 text-sm">Endereço</h4>
+                    <p class="text-gray-400" id="footer-address">
+                        <!-- Loaded by JS -->
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 <span id="footer-copy-name">Pizzaria</span>. Todos os direitos reservados.
+                </p>
+                <p class="text-gray-600 text-xs mt-2">
+                    Desenvolvido por <a href="https://wa.me/5584994203878" target="_blank"
+                        class="text-brand-red hover:underline">Maurilio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<!-- Cart Floating Button -->
+<button onclick="toggleCart()"
+    class="fixed bottom-6 right-6 bg-brand-red text-white p-4 rounded-full shadow-2xl z-40 hover:scale-110 transition-transform flex items-center justify-center group"
+    aria-label="Abrir carrinho">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    <span id="cart-count"
+        class="absolute -top-2 -right-2 bg-yellow-400 text-brand-dark text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-white transform group-hover:scale-110 transition-transform hidden">0</span>
+</button>
+
+<!-- Cart Sidebar & Backdrop -->
+<!-- Backdrop -->
+<div id="cart-backdrop" onclick="toggleCart()"
+    class="fixed inset-0 bg-black/50 z-40 hidden transition-opacity opacity-0 mx-auto"></div>
+
+<!-- Sidebar -->
+<aside id="cart-sidebar"
+    class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+
+    <!-- Header -->
+    <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-brand-dark text-white">
+        <h2 class="text-2xl font-bold flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-red" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            Seu Pedido
+        </h2>
+        <button onclick="toggleCart()" class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Content Area (Scrollable) -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-6">
+
+        <!-- Items Container -->
+        <div id="cart-items-container" class="space-y-4 border-b border-gray-100 pb-6">
+            <!-- Items will be injected here via JS -->
+            <div class="text-center text-gray-400 mt-4">
+                <p>Seu carrinho está vazio 🍕</p>
+                <button onclick="toggleCart()" class="text-brand-red font-bold hover:underline mt-2">Ver
+                    Cardápio</button>
+            </div>
+        </div>
+
+        <!-- Customer Form -->
+        <div id="cart-customer-form" class="space-y-4">
+
+            <!-- Type Toggle -->
+            <div class="flex gap-4 p-1 bg-gray-100 rounded-lg select-none">
+                <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="orderType" value="delivery" class="peer hidden"
+                        onchange="toggleOrderType('delivery')" checked>
+                    <div
+                        class="py-2 text-center rounded-md text-sm font-bold text-gray-500 peer-checked:bg-white peer-checked:text-brand-red peer-checked:shadow-sm transition-all">
+                        Entrega (+R$ 7,00)
+                    </div>
+                </label>
+                <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="orderType" value="pickup" class="peer hidden"
+                        onchange="toggleOrderType('pickup')">
+                    <div
+                        class="py-2 text-center rounded-md text-sm font-bold text-gray-500 peer-checked:bg-white peer-checked:text-brand-red peer-checked:shadow-sm transition-all">
+                        Retirada (Grátis)
+                    </div>
+                </label>
+            </div>
+
+            <!-- Address Fields -->
+            <div id="delivery-fields" class="space-y-4 animate-fade-in-up">
+                <h3 class="font-bold text-gray-700 flex items-center gap-2 text-sm uppercase tracking-wide">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-red" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Endereço de Entrega
+                </h3>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-500 mb-1">Rua e Número <span
+                            class="text-red-500">*</span></label>
+                    <input type="text" id="address-street"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all"
+                        placeholder="Ex: Rua das Flores, 123">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-500 mb-1">Bairro <span
+                            class="text-red-500">*</span></label>
+                    <input type="text" id="address-neighborhood"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all"
+                        placeholder="Ex: Centro">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-500 mb-1">Ponto de Referência (Opcional)</label>
+                    <input type="text" id="address-ref"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all"
+                        placeholder="Ex: Próximo à praça">
+                </div>
+            </div>
+
+            <hr class="border-gray-100 my-4">
+
+            <!-- Observation -->
+            <div class="mb-4">
+                <label class="block text-xs font-semibold text-gray-500 mb-1">Observações (Opcional)</label>
+                <textarea id="order-observation" rows="2"
+                    class="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all placeholder-gray-400"
+                    placeholder="Ex: Sem cebola, caprichar no orégano..."></textarea>
+            </div>
+
+            <hr class="border-gray-100 my-4">
+
+            <!-- Payment -->
+            <h3 class="font-bold text-gray-700 flex items-center gap-2 text-sm uppercase tracking-wide mt-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-red" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                Pagamento
+            </h3>
+
+            <div>
+                <label class="block text-xs font-semibold text-gray-500 mb-1">Forma de Pagamento <span
+                        class="text-red-500">*</span></label>
+                <select id="payment-method" onchange="toggleChangeInput()"
+                    class="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none bg-white transition-all">
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="Pix">💠 Pix</option>
+                    <option value="Cartão" id="option-card">💳 Cartão (Levar Maquininha)</option>
+                    <option value="Dinheiro">💵 Dinheiro</option>
+                </select>
+            </div>
+
+            <div id="change-container" class="hidden animate-fade-in-up space-y-3">
+                <div class="flex items-center gap-4">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="radio" id="change-needed" name="changeType" value="needed" checked
+                            onchange="toggleChangeType()" class="text-brand-red focus:ring-brand-red accent-brand-red">
+                        <span class="text-sm text-gray-700">Preciso de troco</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="radio" id="change-none" name="changeType" value="none"
+                            onchange="toggleChangeType()" class="text-brand-red focus:ring-brand-red accent-brand-red">
+                        <span class="text-sm text-gray-700">Não preciso</span>
+                    </label>
+                </div>
+
+                <div id="change-input-wrapper">
+                    <label class="block text-xs font-semibold text-gray-500 mb-1">Troco para quanto?</label>
+                    <input type="text" id="payment-change"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all"
+                        placeholder="Ex: 50,00">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="p-6 bg-gray-50 border-t border-gray-200">
+        <div class="flex justify-between items-center mb-4 text-xl">
+            <span class="font-bold text-gray-600">Total:</span>
+            <span id="cart-total" class="font-bold text-brand-dark text-2xl">R$ 0,00</span>
+        </div>
+
+        <p
+            class="text-xs text-yellow-800 bg-yellow-50 p-3 rounded-lg mb-4 text-center border border-yellow-200 shadow-sm">
+            ⚠️ <strong>Importante:</strong> Os valores apresentados serão confirmados pela pizzaria ao receber o
+            pedido.
+        </p>
+
+        <button onclick="checkout()"
+            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            Finalizar Pedido
+        </button>
+    </div>
+</aside>
+
+<!-- Shopping Cart Logic -->
+<script>
+    /**
+     * Pizzaria Shopping Cart System
+     * Data-Driven Edition using config.js
+     */
+
+    // --- State ---
+    let cart = [];
+    let orderType = 'delivery'; // 'delivery' | 'pickup'
+    let deliveryFee = CONFIG.business.deliveryFee;
+
+    const CART_STORAGE_KEY = 'pizzaria_cart';
+    const PREFS_STORAGE_KEY = 'pizzaria_prefs';
+
+    // --- Elements ---
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartBackdrop = document.getElementById('cart-backdrop');
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const cartTotalElement = document.getElementById('cart-total');
+    const cartCountElement = document.getElementById('cart-count');
+
+    // Form Inputs
+    const inputStreet = document.getElementById('address-street');
+    const inputNeighborhood = document.getElementById('address-neighborhood');
+    const inputRef = document.getElementById('address-ref');
+    const deliveryFields = document.getElementById('delivery-fields');
+
+    // Payment Elements
+    const selectPayment = document.getElementById('payment-method');
+    const changeContainer = document.getElementById('change-container');
+    const changeInputWrapper = document.getElementById('change-input-wrapper');
+    const radioChangeNeeded = document.getElementById('change-needed');
+    const radioChangeNone = document.getElementById('change-none');
+    const inputChange = document.getElementById('payment-change');
+
+    // --- Initialization ---
+    document.addEventListener('DOMContentLoaded', () => {
+        initApp();
+        loadData();
+        renderCartUI();
+        initFormListeners();
+    });
+
+    function initApp() {
+        // 1. Store Info
+        document.getElementById('navbar-title').innerHTML = `Pizzaria <span class="text-brand-red">Premium</span>`; // Or use CONFIG.store.name
+
+        // Navbar Socials
+        if (CONFIG.store.whatsappNumber) {
+            const waLink = `https://wa.me/${CONFIG.store.whatsappNumber}`;
+            document.getElementById('navbar-whatsapp').href = waLink;
+            document.getElementById('navbar-whatsapp').classList.remove('hidden');
+        } else {
+            document.getElementById('navbar-whatsapp').classList.add('hidden');
+        }
+
+        if (CONFIG.store.instagram) {
+            document.getElementById('navbar-instagram').href = CONFIG.store.instagram;
+            document.getElementById('navbar-instagram').classList.remove('hidden');
+        } else {
+            document.getElementById('navbar-instagram').classList.add('hidden');
+        }
+
+        // Footer Info
+        document.getElementById('footer-hours-msg').innerHTML = `${CONFIG.store.operatingHours.days}<br>${CONFIG.store.operatingHours.hours}`;
+        document.getElementById('footer-address').innerHTML = `${CONFIG.store.address.street} - ${CONFIG.store.address.neighborhood}<br>${CONFIG.store.address.city}`;
+        document.getElementById('footer-copy-name').innerText = CONFIG.store.name;
+
+        // 2. Render Initial Menu
+        renderCategories();
+
+        // Render first category by default
+        if (CONFIG.categories.length > 0) {
+            renderMenu(CONFIG.categories[0].id);
+        }
+    }
+
+    function renderCategories() {
+        const tabsContainer = document.getElementById('category-tabs');
+        tabsContainer.innerHTML = '';
+
+        CONFIG.categories.forEach((cat, index) => {
+            const btn = document.createElement('button');
+            btn.className = `tab-btn px-6 py-2 rounded-full font-bold text-sm md:text-base border-2 border-transparent bg-white text-gray-600 hover:border-brand-red transition-all whitespace-nowrap shadow-sm`;
+            btn.id = `tab-${cat.id}`;
+            btn.onclick = () => filterMenu(cat.id);
+            btn.innerText = `${cat.icon} ${cat.name}`;
+
+            tabsContainer.appendChild(btn);
+        });
+    }
+
+    function initFormListeners() {
+        // Auto-save address on change
+        [inputStreet, inputNeighborhood, inputRef].forEach(input => {
+            input.addEventListener('blur', saveData);
+        });
+
+        // Input Filter for Change (Troco)
+        inputChange.addEventListener('input', (e) => {
+            let value = e.target.value;
+            value = value.replace(/[^0-9.,]/g, '');
+            const parts = value.split(/[.,]/);
+            if (parts.length > 2) {
+                value = parts[0] + '.' + parts.slice(1).join('');
+            }
+            e.target.value = value;
+        });
+    }
+
+    // --- Dynamic Menu Rendering ---
+
+    function renderMenu(category) {
+        const grid = document.getElementById('menu-grid');
+        grid.innerHTML = '';
+
+        // Update Tabs
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(tab => {
+            const isSelected = tab.id === `tab-${category}`;
+            if (isSelected) {
+                tab.classList.remove('bg-white', 'text-gray-600', 'border-transparent');
+                tab.classList.add('bg-brand-red', 'text-white', 'border-brand-red');
+            } else {
+                tab.classList.add('bg-white', 'text-gray-600', 'border-transparent');
+                tab.classList.remove('bg-brand-red', 'text-white', 'border-brand-red');
+            }
+        });
+
+        // Filter and Create Cards
+        const items = CONFIG.menu.filter(item => item.category === category);
+
+        items.forEach((item, index) => {
+            const card = document.createElement('article');
+            card.className = "menu-item group bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden flex md:flex-col h-32 md:h-auto border border-gray-100 opacity-0 translate-y-4";
+
+            card.innerHTML = `
+                <div class="w-1/3 md:w-full h-full md:h-48 relative overflow-hidden">
+                    <img src="${item.image}" alt="${item.name}"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="w-2/3 md:w-full p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-start mb-1">
+                        <h3 class="text-lg font-bold leading-tight text-gray-800">${item.name}</h3>
+                        <span class="bg-red-50 text-brand-red text-xs font-bold px-2 py-1 rounded-full">${formatCurrency(item.price)}</span>
+                    </div>
+                    <p class="text-gray-500 text-xs md:text-sm mb-3 line-clamp-2">
+                        ${item.description}
+                    </p>
+                    <button onclick="addToCart('${item.id}')"
+                        class="w-full bg-brand-red text-white text-xs md:text-sm font-bold py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-1">
+                        Adicionar
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                </div>
+            `;
+
+            grid.appendChild(card);
+
+            // Staggered Animation
+            setTimeout(() => {
+                card.classList.remove('opacity-0', 'translate-y-4');
+            }, index * 50);
+        });
+    }
+
+    function filterMenu(category) {
+        renderMenu(category); // Reuse render logic
+    }
+
+    // --- Core Logic ---
+
+    function checkOpeningHours() {
+        const date = new Date();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        const day = date.getDay();
+
+        const { days, hours, openHour, closeHour, closeMinute, closedDays } = CONFIG.store.operatingHours;
+
+        // Check Closed Days
+        if (closedDays.includes(day)) {
+            alert(`🕒 Ops! Estamos fechados hoje.\n\n⏰ Horário de Funcionamento:\n${days}: ${hours}`);
+            return false;
+        }
+
+        // Check Time
+        const currentTime = hour * 60 + minute;
+        const openTimeVal = openHour * 60;
+        const closeTimeVal = closeHour * 60 + closeMinute;
+
+        const isOpenTime = currentTime >= openTimeVal && currentTime <= closeTimeVal;
+
+        if (isOpenTime) return true;
+
+        alert(`🕒 Ops! Estamos fechados no momento.\n\n⏰ Horário de Funcionamento:\n${days}: ${hours}`);
+        return false;
+    }
+
+    // Updated addToCart to accept ID
+    function addToCart(itemId) {
+        if (!checkOpeningHours()) return;
+
+        const menuItem = CONFIG.menu.find(m => m.id === itemId);
+        if (!menuItem) return;
+
+        const existingItem = cart.find(item => item.id === itemId);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            // Push structured item
+            cart.push({
+                id: menuItem.id,
+                name: menuItem.name,
+                price: menuItem.price,
+                quantity: 1
+            });
+        }
+        saveData();
+        renderCartUI();
+        openCart();
+    }
+
+    function updateQuantity(itemId, change) {
+        const itemIndex = cart.findIndex(item => item.id === itemId);
+        if (itemIndex === -1) return;
+
+        cart[itemIndex].quantity += change;
+        if (cart[itemIndex].quantity <= 0) {
+            cart.splice(itemIndex, 1);
+        }
+        saveData();
+        renderCartUI();
+    }
+
+    // --- Toggle Logic ---
+
+    function toggleOrderType(type) {
+        orderType = type;
+        deliveryFee = (type === 'delivery') ? CONFIG.business.deliveryFee : 0.00;
+
+        // Visual Updates
+        if (type === 'delivery') {
+            deliveryFields.classList.remove('hidden');
+            document.getElementById('option-card').innerText = '💳 Cartão (Levar Maquininha)';
+        } else {
+            deliveryFields.classList.add('hidden');
+            document.getElementById('option-card').innerText = '💳 Cartão';
+        }
+
+        renderCartUI(); // Update total
+        saveData();
+    }
+
+    function toggleChangeInput() {
+        const payment = selectPayment.value;
+        if (payment === 'Dinheiro') {
+            changeContainer.classList.remove('hidden');
+        } else {
+            changeContainer.classList.add('hidden');
+        }
+    }
+
+    function toggleChangeType() {
+        if (radioChangeNeeded.checked) {
+            changeInputWrapper.classList.remove('hidden');
+            setTimeout(() => inputChange.focus(), 100);
+        } else {
+            changeInputWrapper.classList.add('hidden');
+        }
+    }
+
+    // --- Render Cart ---
+
+    function renderCartUI() {
+        // 1. Badge Count
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElement.innerText = totalItems;
+        cartCountElement.classList.toggle('hidden', totalItems === 0);
+
+        // 2. Items List
+        cartItemsContainer.innerHTML = '';
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = `
+                <div class="text-center text-gray-400 mt-8">
+                    <p class="mb-2">Seu carrinho está vazio 🍕</p>
+                    <button onclick="toggleCart()" class="text-brand-red font-bold hover:underline">Ver Cardápio</button>
+                </div>`;
+            cartTotalElement.innerText = 'R$ 0,00';
+            return;
+        }
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            cartItemsContainer.innerHTML += `
+                <div class="flex items-center justify-between bg-white p-3 rounded-lg border border-gray-100 shadow-sm animate-fade-in-up">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-800">${item.name}</h4>
+                        <div class="text-sm text-gray-500">Unit: ${formatCurrency(item.price)}</div>
+                    </div>
+                    <div class="flex flex-col items-end gap-2">
+                        <div class="font-bold text-brand-red">${formatCurrency(itemTotal)}</div>
+                        <div class="flex items-center bg-gray-100 rounded-lg overflow-hidden">
+                            <button onclick="updateQuantity('${item.id}', -1)" class="px-3 py-1 hover:bg-gray-200 text-brand-red font-bold">-</button>
+                            <span class="px-2 font-medium text-sm w-8 text-center">${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.id}', 1)" class="px-3 py-1 hover:bg-gray-200 text-brand-red font-bold">+</button>
+                        </div>
+                    </div>
+                </div>`;
+        });
+
+        // 3. Total Calculation
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const total = subtotal + deliveryFee;
+
+        cartTotalElement.innerHTML = `
+            ${formatCurrency(total)} <span class="text-sm text-gray-400 font-normal block">(c/ taxa)</span>
+        `;
+    }
+
+    // --- Data Persistence ---
+
+    function saveData() {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+        const prefs = {
+            orderType,
+            street: inputStreet.value,
+            neighborhood: inputNeighborhood.value,
+            ref: inputRef.value
+        };
+        localStorage.setItem(PREFS_STORAGE_KEY, JSON.stringify(prefs));
+    }
+
+    function loadData() {
+        // Load Cart
+        const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+        if (storedCart) cart = JSON.parse(storedCart);
+
+        // Load Prefs
+        const storedPrefs = localStorage.getItem(PREFS_STORAGE_KEY);
+        if (storedPrefs) {
+            const prefs = JSON.parse(storedPrefs);
+            if (prefs.orderType) {
+                // Set Radio
+                const radio = document.querySelector(`input[name="orderType"][value="${prefs.orderType}"]`);
+                if (radio) {
+                    radio.checked = true;
+                    toggleOrderType(prefs.orderType);
+                }
+            }
+            if (prefs.street) inputStreet.value = prefs.street;
+            if (prefs.neighborhood) inputNeighborhood.value = prefs.neighborhood;
+            if (prefs.ref) inputRef.value = prefs.ref;
+        }
+    }
+
+    // --- Checkout & WhatsApp ---
+
+    function checkout() {
+        if (!checkOpeningHours()) return;
+        if (cart.length === 0) {
+            alert("Carrinho vazio!");
+            return;
+        }
+
+        // Validate Delivery Address
+        if (orderType === 'delivery') {
+            if (!inputStreet.value.trim() || !inputNeighborhood.value.trim()) {
+                alert("Para entrega, preencha o Endereço completo.");
+                inputStreet.focus();
+                return;
+            }
+        }
+
+        // Validate Payment
+        const payment = selectPayment.value;
+        if (!payment) {
+            alert("Selecione uma forma de pagamento.");
+            selectPayment.focus();
+            return;
+        }
+
+        // Build Message
+        let msg = "--- NOVO PEDIDO ---\n\n";
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            msg += `${item.quantity}x ${item.name} - ${formatCurrency(itemTotal)}\n`;
+        });
+
+        // Observation
+        const observation = document.getElementById('order-observation').value.trim();
+        if (observation) {
+            msg += `\nOBS: ${observation}\n`;
+        }
+
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const finalTotal = subtotal + deliveryFee;
+
+        // CHECKOUT VALIDATION FOR CHANGE (TROCO)
+        if (payment === 'Dinheiro' && radioChangeNeeded.checked) {
+            const rawChangeValue = inputChange.value.replace(',', '.');
+            const changeValue = parseFloat(rawChangeValue);
+
+            if (isNaN(changeValue) || changeValue <= finalTotal) {
+                alert(`O valor para troco deve ser maior que o total do pedido (${formatCurrency(finalTotal)})`);
+                inputChange.focus();
+                return;
+            }
+        }
+
+        msg += `\n------------------\n`;
+        msg += `TIPO: ${orderType === 'delivery' ? 'Entrega' : 'Retirada'}\n`;
+
+        if (orderType === 'delivery') {
+            msg += `ENDEREÇO: ${inputStreet.value} - ${inputNeighborhood.value}\n`;
+            if (inputRef.value) msg += `Ref: ${inputRef.value}\n`;
+        }
+
+        msg += `PAGAMENTO: ${payment}\n`;
+
+        if (payment === 'Dinheiro') {
+            if (radioChangeNeeded.checked) {
+                const trocoVal = inputChange.value;
+                msg += `TROCO: ${trocoVal ? 'Para ' + trocoVal : 'Sim (Valor não inf.)'}\n`;
+            } else {
+                msg += `TROCO: Não precisa\n`;
+            }
+        }
+
+        msg += `------------------\n`;
+        msg += `TOTAL (c/ taxa): ${formatCurrency(finalTotal)}\n\n`;
+        msg += `Pedido sujeito a conferência de valores.\n`;
+
+        // Send
+        const phone = CONFIG.store.whatsappNumber;
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // --- Helpers ---
+
+    function formatCurrency(value) {
+        return value.toLocaleString(CONFIG.business.currencyLocale, CONFIG.business.currencyOptions);
+    }
+
+    function toggleCart() {
+        const isHidden = cartSidebar.classList.contains('translate-x-full');
+        if (isHidden) {
+            openCart();
+        } else {
+            closeCart();
+        }
+    }
+
+    function openCart() {
+        cartSidebar.classList.remove('translate-x-full');
+        cartBackdrop.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+    }
+
+    function closeCart() {
+        cartSidebar.classList.add('translate-x-full');
+        cartBackdrop.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }
+
+    // CSS Animation Helper
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in-up { animation: fadeInUp 0.3s ease-out forwards; }
+    `;
+    document.head.appendChild(style);
+
+</script>
+
+</html>
