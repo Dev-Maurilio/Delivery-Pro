@@ -34,15 +34,6 @@ const CONFIG = {
 }
 ```
 
-## 🛣️ Roadmap: O Caminho para o SaaS (Plano Pro)
-
-Como estudante de Informática (4º ano), este projeto é a fundação para uma plataforma SaaS (Software as a Service) completa que será hospedada em VPS Hostinger utilizando:
-
-1.  **Migração para Flask/Python:** Substituição do `config.js` por uma API REST robusta.
-2.  **Dashboard Administrativo:** Painel para o dono da pizzaria gerenciar estoque e preços em tempo real.
-3.  **Banco de Dados Relacional:** Armazenamento histórico de pedidos para geração de relatórios de vendas por bairro.
-4.  **Dockerization:** Deploy simplificado e isolado via Docker para múltiplos clientes.
-
 ## 📧 Contato
 
 Desenvolvido por **Maurilio**
