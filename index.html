@@ -276,9 +276,9 @@
                 <label class="flex-1 cursor-pointer">
                     <input type="radio" name="orderType" value="delivery" class="peer hidden"
                         onchange="toggleOrderType('delivery')" checked>
-                    <div
+                    <div id="label-delivery-option"
                         class="py-2 text-center rounded-md text-sm font-bold text-gray-500 peer-checked:bg-white peer-checked:text-brand-red peer-checked:shadow-sm transition-all">
-                        Entrega (+R$ 7,00)
+                        Entrega
                     </div>
                 </label>
                 <label class="flex-1 cursor-pointer">
@@ -565,6 +565,11 @@
             document.getElementById('navbar-instagram').classList.add('hidden');
         }
 
+        // Dynamic Delivery Label
+        const fee = CONFIG.business.deliveryFee;
+        const feeFormatted = fee === 0 ? 'Grátis' : `+${formatCurrency(fee)}`;
+        document.getElementById('label-delivery-option').innerText = `Entrega (${feeFormatted})`;
+
         // Footer Info
         // Footer Info
         document.getElementById('footer-hours-msg').innerHTML = getFormattedHoursSummary();
@@ -849,7 +854,7 @@
         }
 
         // Calculate Price
-        let finalPrice = currentModalItem.prices[selectedSize];
+        let finalPrice = currentModalItem.prices[selectedSize].price;
 
         // Half Logic
         const halfType = document.querySelector('input[name="halfType"]:checked')?.value;
@@ -858,7 +863,7 @@
         if (halfType === 'half' && secondFlavorId) {
             const secondItem = CONFIG.menu.find(m => m.id === secondFlavorId);
             if (secondItem && secondItem.prices) {
-                const secondPrice = secondItem.prices[selectedSize];
+                const secondPrice = secondItem.prices[selectedSize].price;
                 finalPrice = Math.max(finalPrice, secondPrice);
             }
         }
@@ -890,12 +895,12 @@
 
         if (currentModalItem.prices) {
             // Complex Item
-            let price = currentModalItem.prices[selectedSize];
+            let price = currentModalItem.prices[selectedSize].price;
 
             if (halfType === 'half') {
                 const secondId = document.getElementById('second-flavor-select').value;
                 const secondItem = CONFIG.menu.find(m => m.id === secondId);
-                const secondPrice = secondItem.prices[selectedSize];
+                const secondPrice = secondItem.prices[selectedSize].price;
 
                 finalPrice = Math.max(price, secondPrice);
                 finalName = `Pizza ${selectedSize} (${currentModalItem.name} / ${secondItem.name})`;
@@ -1432,11 +1437,15 @@
         if (item.prices) {
             // It's a Pizza (or item with sizes)
             Object.keys(item.prices).forEach(size => {
+                const sizeData = item.prices[size];
                 const btn = document.createElement('button');
-                btn.className = `size-btn border border-gray-200 rounded-lg p-3 text-center hover:border-brand-red hover:bg-red-50 transition-all`;
+                btn.className = `size-btn border border-gray-200 rounded-lg p-3 text-center hover:border-brand-red hover:bg-red-50 transition-all group`;
                 btn.id = `size-${size}`;
                 btn.onclick = () => selectSize(size);
-                btn.innerHTML = `<span class="block font-bold text-gray-800">${size}</span>`;
+                btn.innerHTML = `
+                    <span class="block font-bold text-gray-800 group-hover:text-brand-red transition-colors">${size}</span>
+                    <span class="block text-xs text-gray-500 group-hover:text-red-400 transition-colors">${sizeData.description}</span>
+                `;
                 sizesContainer.appendChild(btn);
             });
 

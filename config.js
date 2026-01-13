@@ -39,7 +39,12 @@ const CONFIG = {
         {
             id: 'p1',
             name: "Calabresa",
-            prices: { P: 30.00, M: 35.00, G: 40.00, GG: 55.00 },
+            prices: {
+                "P": { price: 30.00, description: "4 fatias" },
+                "M": { price: 35.00, description: "6 fatias" },
+                "G": { price: 40.00, description: "8 fatias" },
+                "GG": { price: 55.00, description: "12 fatias" }
+            },
             allowHalf: true,
             category: "pizzas",
             description: "Calabresa defumada, cebola roxa e azeitonas.",
@@ -48,7 +53,12 @@ const CONFIG = {
         {
             id: 'p3',
             name: "Frango c/ Catupiry",
-            prices: { P: 32.00, M: 42.00, G: 50.00, GG: 65.00 },
+            prices: {
+                "P": { price: 32.00, description: "4 fatias" },
+                "M": { price: 42.00, description: "6 fatias" },
+                "G": { price: 50.00, description: "8 fatias" },
+                "GG": { price: 65.00, description: "12 fatias" }
+            },
             allowHalf: true,
             category: "pizzas",
             description: "Frango desfiado e Catupiry original gratinado.",
@@ -75,7 +85,10 @@ const CONFIG = {
         {
             id: 'b1',
             name: "Coca-Cola",
-            prices: { "1L": 6.00, "2L": 12.00 },
+            prices: {
+                "1L": { price: 6.00, description: "Garrafa" },
+                "2L": { price: 12.00, description: "Garrafa" }
+            },
             category: "bebidas",
             description: "Refrigerante Coca-Cola.",
             image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=800&auto=format&fit=crop"
