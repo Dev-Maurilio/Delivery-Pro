@@ -19,7 +19,7 @@ const CONFIG = {
                 { day: 2, openHour: 18, openMinute: 0, closeHour: 23, closeMinute: 59, closed: false }, // Terça
                 { day: 3, openHour: 18, openMinute: 0, closeHour: 23, closeMinute: 59, closed: false }, // Quarta
                 { day: 4, openHour: 18, openMinute: 0, closeHour: 23, closeMinute: 59, closed: false }, // Quinta
-                { day: 5, openHour: 18, openMinute: 0, closeHour: 23, closeMinute: 59, closed: false }, // Sexta
+                { day: 5, openHour: 3, openMinute: 0, closeHour: 23, closeMinute: 59, closed: false }, // Sexta
                 { day: 6, openHour: 18, openMinute: 0, closeHour: 23, closeMinute: 59, closed: false }  // Sábado
             ]
         }
